@@ -1,0 +1,3 @@
+UPDATE mysql.user SET plugin = NULL WHERE user = 'root' AND plugin = 'unix_socket';
+MariaDB [(none)]> FLUSH PRIVILEGES;
+MariaDB [(none)]> SET PASSWORD FOR root@'localhost'=PASSWORD('mon_nouveau_mot-de_passe');
